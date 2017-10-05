@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets  xmlns="http://joshion.com">
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Title>comment of func()</Title>
@@ -377,17 +377,151 @@ $end$]]>
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID></ID>
-					<ToolTip></ToolTip>
-					<Default></Default>
+					<ID>funcName</ID>
+					<ToolTip>the name of function</ToolTip>
+					<Default>func</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>the params of function</ToolTip>
+					<Default>void</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="cpp"><![CDATA[void func()
-			{
-				$end$
-			}]]>
+			<Code Language="cpp"><![CDATA[void $funcName$($params$)
+{
+	$end$
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>int func()</Title>
+			<Shortcut>ifun</Shortcut>
+			<Description>Code snippet for function</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>funcName</ID>
+					<ToolTip>the name of function</ToolTip>
+					<Default>func</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>the params of function</ToolTip>
+					<Default>void</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[int $funcName$($params$)
+{
+	$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>bool func()</Title>
+			<Shortcut>bfun</Shortcut>
+			<Description>Code snippet for function</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>funcName</ID>
+					<ToolTip>the name of function</ToolTip>
+					<Default>func</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>the params of function</ToolTip>
+					<Default>void</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[bool $funcName$($params$)
+{
+	$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>double func()</Title>
+			<Shortcut>dfun</Shortcut>
+			<Description>Code snippet for function</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>funcName</ID>
+					<ToolTip>the name of function</ToolTip>
+					<Default>func</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>the params of function</ToolTip>
+					<Default>void</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[double $funcName$($params$)
+{
+	$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>std::string func()</Title>
+			<Shortcut>sfun</Shortcut>
+			<Description>Code snippet for function</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>funcName</ID>
+					<ToolTip>the name of function</ToolTip>
+					<Default>func</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>the params of function</ToolTip>
+					<Default>void</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[std::string $funcName$($params$)
+{
+	$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
 
 </CodeSnippets>
