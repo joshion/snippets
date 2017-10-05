@@ -309,7 +309,6 @@
 			<Author>Joshion Way</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
-				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
@@ -328,6 +327,32 @@
 			<Code Language="cpp"><![CDATA[if ($expression$)
 {
     $ifStatement$
+}
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>if_surround</Title>
+			<Shortcut>ifs</Shortcut>
+			<Description>Code snippet for if statement</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>true</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[if ($expression$)
+{
     $selected$
 }
 $end$]]>
@@ -376,5 +401,407 @@ $end$]]>
 		</Snippet>
 	</CodeSnippet>
 
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>namespace</Title>
+			<Shortcut>namespace</Shortcut>
+			<Description>Code snippet for namespace</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Namespace name</ToolTip>
+					<Default>name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[namespace $name$
+	{
+		$selected$ $end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+    <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>#if</Title>
+			<Shortcut>#if</Shortcut>
+			<Description>Code snippet for #if</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Preprocessor expression to evaluate</ToolTip>
+					<Default>0</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[#if $expression$
+$selected$ $end$ 
+#endif // $expression$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>#ifdef</Title>
+			<Shortcut>#ifdef</Shortcut>
+			<Description>Code snippet for #ifdef</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Preprocessor expression to evaluate</ToolTip>
+					<Default>DEBUG</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[#ifdef $expression$
+$selected$ $end$ 
+#endif // $expression$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>#ifndef</Title>
+			<Shortcut>#ifndef</Shortcut>
+			<Description>Code snippet for #ifndef</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Preprocessor expression to evaluate</ToolTip>
+					<Default>DEBUG</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[#ifndef $expression$
+$selected$ $end$ 
+#endif // !$expression$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>#region</Title>
+			<Shortcut>#region</Shortcut>
+			<Description>Code snippet for #region</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Region name</ToolTip>
+					<Default>MyRegion</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[#pragma region $name$
+$selected$ $end$ 
+#pragma endregion
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>rfor</Title>
+			<Shortcut>rfor</Shortcut>
+			<Description>Code snippet for 'range-based for' loop</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>variable</ID>
+					<Default>i</Default>
+					<ToolTip>Variable</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>range</ID>
+					<Default>v</Default>
+					<ToolTip>Range</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[for (auto& $variable$ : $range$)
+{
+    $selected$ $end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>rcfor</Title>
+			<Shortcut>rcfor</Shortcut>
+			<Description>Code snippet for 'const range-based for' loop</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>variable</ID>
+					<Default>i</Default>
+					<ToolTip>Variable</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>range</ID>
+					<Default>v</Default>
+					<ToolTip>Range</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[for (const auto& $variable$ : $range$)
+{
+    $selected$ $end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>struct</Title>
+			<Shortcut>struct</Shortcut>
+			<Description>Code snippet for struct</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Struct name</ToolTip>
+					<Default>MyStruct</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[struct $name$
+{
+    $end$
+};
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>struct_surround</Title>
+			<Shortcut>structs</Shortcut>
+			<Description>Code snippet for struct</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Struct name</ToolTip>
+					<Default>MyStruct</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[struct $name$
+{
+    $selected$
+    $end$
+};
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>switch</Title>
+			<Shortcut>switch</Shortcut>
+			<Description>Code snippet for switch statement</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Expression to switch on</ToolTip>
+					<Default>switch_on</Default>
+				</Literal>
+				<Literal Editable="false">
+					<ID>cases</ID>
+					<Function>GenerateSwitchCases($expression$)</Function>
+					<Default><![CDATA[default:
+	break;]]>
+                    </Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[switch ($expression$)
+{
+    $cases$$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>try</Title>
+			<Shortcut>try</Shortcut>
+			<Description>Code snippet for try catch</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Declarations>
+				<Literal>
+					<ID>try</ID>
+					<ToolTip>statement of try</ToolTip>
+					<Default>// to do</Default>
+				</Literal>
+            </Declarations>
+			<Code Language="cpp"><![CDATA[try
+{
+    $try$
+}
+catch (const std::exception& e)
+{
+    $end$
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>try_surround</Title>
+			<Shortcut>trys</Shortcut>
+			<Description>Code snippet for try catch</Description>
+			<Author>Joshion Way</Author>
+			<SnippetTypes>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>catch</ID>
+                    <ToolTip>statement of catch</ToolTip>
+                    <Default>// to do</Default>
+                </Literal>
+            </Declarations>
+			<Code Language="cpp"><![CDATA[try
+{
+    $selected$
+}
+catch (const std::exception& e)
+{
+    $catch$
+}
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>union</Title>
+			<Shortcut>union</Shortcut>
+			<Description>Code snippet for union</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Union name</ToolTip>
+					<Default>MyUnion</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[union $name$
+{
+    $selected$ $end$
+};]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>while</Title>
+			<Shortcut>while</Shortcut>
+			<Description>Code snippet for while loop</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>true</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[while ($expression$)
+{
+        $selected$ $end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 
 </CodeSnippets>
